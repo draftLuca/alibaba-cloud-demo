@@ -1,0 +1,15 @@
+server: 
+  port: 5001
+  servlet:
+    context-path: /ultraman
+spring:
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        server-addr: ${spring.cloud.nacos.server-addr}
+      config:
+        server-addr: ${spring.cloud.nacos.server-addr}
+        file-extension: yaml
+  application:
+    name: ultraman
