@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/heizai/heizai-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/heizai/heizai-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/heizai/heizai-gate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/heizai/heizai-ultraman/src/main/java" charset="UTF-8" />
   </component>
 </project>

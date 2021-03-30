@@ -1,4 +1,5 @@
 servlet:
+  port: 5001
   context-path: /ultraman
 spring:
   application:

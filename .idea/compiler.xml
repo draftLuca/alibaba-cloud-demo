@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="nacos-sys" />
         <module name="nacos-client" />
+        <module name="heizai-ultraman (1)" />
         <module name="heizai-admin" />
         <module name="nacos-common" />
         <module name="nacos-cmdb" />
@@ -23,17 +24,23 @@
         <module name="nacos-core" />
         <module name="heizai-commons" />
         <module name="nacos-address" />
+        <module name="heizai-gate" />
         <module name="nacos-config" />
         <module name="nacos-api" />
         <module name="nacos-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="gateway" target="1.8" />
       <module name="heizai" target="1.8" />
       <module name="heizai-admin" target="1.8" />
       <module name="heizai-admin (1)" target="1.8" />
       <module name="heizai-commons" target="1.8" />
+      <module name="heizai-gate" target="1.8" />
+      <module name="heizai-gateway" target="1.8" />
+      <module name="heizai-geta" target="1.8" />
       <module name="heizai-ultraman" target="1.8" />
+      <module name="heizai-ultraman (1)" target="1.8" />
       <module name="nacos-address" target="1.8" />
       <module name="nacos-all" target="1.8" />
       <module name="nacos-api" target="6" />
@@ -55,10 +62,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
       <module name="heizai-admin" options="-parameters" />
       <module name="heizai-admin (1)" options="-parameters" />
       <module name="heizai-commons" options="-parameters" />
+      <module name="heizai-gate" options="-parameters" />
+      <module name="heizai-gateway" options="-parameters" />
+      <module name="heizai-geta" options="-parameters" />
       <module name="heizai-ultraman" options="-parameters" />
+      <module name="heizai-ultraman (1)" options="-parameters" />
     </option>
   </component>
 </project>

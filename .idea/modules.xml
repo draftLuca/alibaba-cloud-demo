@@ -5,9 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/alibaba-cloud-demo.iml" filepath="$PROJECT_DIR$/.idea/alibaba-cloud-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/heizai.iml" filepath="$PROJECT_DIR$/heizai/heizai.iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/heizai-admin/heizai-admin.iml" filepath="$PROJECT_DIR$/heizai/heizai-admin/heizai-admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/heizai/heizai-ultraman/heizai-admin (1).iml" filepath="$PROJECT_DIR$/heizai/heizai-ultraman/heizai-admin (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/heizai/heizai-gate/heizai-admin (1).iml" filepath="$PROJECT_DIR$/heizai/heizai-gate/heizai-admin (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/heizai-commons/heizai-commons.iml" filepath="$PROJECT_DIR$/heizai/heizai-commons/heizai-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heizai/heizai-gate/heizai-gate.iml" filepath="$PROJECT_DIR$/heizai/heizai-gate/heizai-gate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heizai/heizai-gateway.iml" filepath="$PROJECT_DIR$/heizai/heizai-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/heizai-ultraman/heizai-ultraman.iml" filepath="$PROJECT_DIR$/heizai/heizai-ultraman/heizai-ultraman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heizai/heizai-gateway/heizai-ultraman (1).iml" filepath="$PROJECT_DIR$/heizai/heizai-gateway/heizai-ultraman (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/nacos-develop/address/nacos-address.iml" filepath="$PROJECT_DIR$/heizai/nacos-develop/address/nacos-address.iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/nacos-develop/nacos-all.iml" filepath="$PROJECT_DIR$/heizai/nacos-develop/nacos-all.iml" />
       <module fileurl="file://$PROJECT_DIR$/heizai/nacos-develop/api/nacos-api.iml" filepath="$PROJECT_DIR$/heizai/nacos-develop/api/nacos-api.iml" />
