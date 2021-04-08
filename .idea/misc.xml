@@ -9,15 +9,22 @@
         <option value="$PROJECT_DIR$/heizai/heizai-ultraman/pom.xml" />
         <option value="$PROJECT_DIR$/heizai/heizai-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/heizai/heizai-gate/pom.xml" />
+        <option value="$PROJECT_DIR$/heizai/Sentinel-master/pom.xml" />
+        <option value="$PROJECT_DIR$/heizai/Sentinel-1.7.0/pom.xml" />
+        <option value="$PROJECT_DIR$/heizai/seata-1.4.1/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/heizai/heizai-admin/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/heizai/heizai-admin/untitled1/pom.xml" />
         <option value="$PROJECT_DIR$/heizai/heizai-geta/pom.xml" />
+        <option value="$PROJECT_DIR$/heizai/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/heizai/untitled1/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

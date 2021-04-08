@@ -7,27 +7,74 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nacos-sys" />
+        <module name="sentinel-demo-rocketmq" />
+        <module name="sentinel-reactor-adapter" />
         <module name="nacos-client" />
-        <module name="heizai-ultraman (1)" />
-        <module name="heizai-admin" />
+        <module name="sentinel-transport-netty-http" />
         <module name="nacos-common" />
-        <module name="nacos-cmdb" />
+        <module name="heizai-admin (1)" />
+        <module name="nacos-console" />
+        <module name="sentinel-annotation-aspectj" />
+        <module name="nacos-core" />
+        <module name="sentinel-cluster-server-default" />
+        <module name="sentinel-demo-parameter-flow-control" />
+        <module name="sentinel-apache-dubbo-adapter" />
+        <module name="sentinel-parameter-flow-control" />
+        <module name="nacos-test" />
+        <module name="sentinel-demo-basic" />
+        <module name="sentinel-demo-slot-chain-spi" />
+        <module name="sentinel-zuul-adapter" />
+        <module name="sentinel-demo-etcd-datasource" />
+        <module name="heizai-ultraman (1)" />
+        <module name="sentinel-datasource-nacos" />
+        <module name="sentinel-web-servlet" />
+        <module name="sentinel-transport-common" />
         <module name="nacos-auth" />
+        <module name="sentinel-datasource-zookeeper" />
+        <module name="sentinel-benchmark" />
+        <module name="sentinel-core" />
+        <module name="sentinel-spring-webflux-adapter" />
+        <module name="sentinel-cluster-client-default" />
+        <module name="sentinel-datasource-extension" />
+        <module name="sentinel-datasource-etcd" />
+        <module name="sentinel-demo-annotation-spring-aop" />
+        <module name="sentinel-datasource-spring-cloud-config" />
+        <module name="sentinel-demo-apollo-datasource" />
+        <module name="sentinel-demo-apache-dubbo" />
+        <module name="sentinel-demo-dynamic-file-rule" />
+        <module name="sentinel-demo-command-handler" />
+        <module name="sentinel-datasource-apollo" />
         <module name="nacos-example" />
         <module name="heizai-ultraman" />
         <module name="nacos-consistency" />
-        <module name="heizai-admin (1)" />
-        <module name="nacos-naming" />
-        <module name="nacos-console" />
-        <module name="nacos-istio" />
-        <module name="nacos-core" />
-        <module name="heizai-commons" />
+        <module name="sentinel-transport-simple-http" />
+        <module name="sentinel-demo-nacos-datasource" />
         <module name="nacos-address" />
-        <module name="heizai-gate" />
         <module name="nacos-config" />
         <module name="nacos-api" />
-        <module name="nacos-test" />
+        <module name="sentinel-demo-zookeeper-datasource" />
+        <module name="sentinel-spring-cloud-gateway-adapter" />
+        <module name="sentinel-datasource-consul" />
+        <module name="sentinel-dubbo-adapter" />
+        <module name="sentinel-dashboard" />
+        <module name="nacos-sys" />
+        <module name="sentinel-cluster-server-envoy-rls" />
+        <module name="sentinel-api-gateway-adapter-common" />
+        <module name="sentinel-demo-spring-cloud-gateway" />
+        <module name="sentinel-grpc-adapter" />
+        <module name="sentinel-cluster-common-default" />
+        <module name="sentinel-demo-dubbo" />
+        <module name="heizai-admin" />
+        <module name="sentinel-demo-cluster-embedded" />
+        <module name="nacos-cmdb" />
+        <module name="sentinel-demo-spring-webflux" />
+        <module name="nacos-naming" />
+        <module name="sentinel-datasource-redis" />
+        <module name="nacos-istio" />
+        <module name="sentinel-demo-cluster-server-alone" />
+        <module name="sentinel-demo-zuul-gateway" />
+        <module name="heizai-commons" />
+        <module name="heizai-gate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -58,6 +105,166 @@
       <module name="nacos-naming" target="1.8" />
       <module name="nacos-sys" target="8" />
       <module name="nacos-test" target="1.8" />
+      <module name="seata-all" target="1.8" />
+      <module name="seata-bom" target="1.8" />
+      <module name="seata-common" target="1.8" />
+      <module name="seata-compressor" target="1.8" />
+      <module name="seata-compressor-7z" target="1.8" />
+      <module name="seata-compressor-all" target="1.8" />
+      <module name="seata-compressor-bzip2" target="1.8" />
+      <module name="seata-compressor-deflater" target="1.8" />
+      <module name="seata-compressor-gzip" target="1.8" />
+      <module name="seata-compressor-lz4" target="1.8" />
+      <module name="seata-compressor-zip" target="1.8" />
+      <module name="seata-config" target="1.8" />
+      <module name="seata-config-all" target="1.8" />
+      <module name="seata-config-apollo" target="1.8" />
+      <module name="seata-config-consul" target="1.8" />
+      <module name="seata-config-core" target="1.8" />
+      <module name="seata-config-custom" target="1.8" />
+      <module name="seata-config-etcd3" target="1.8" />
+      <module name="seata-config-nacos" target="1.8" />
+      <module name="seata-config-spring-cloud" target="1.8" />
+      <module name="seata-config-zk" target="1.8" />
+      <module name="seata-core" target="1.8" />
+      <module name="seata-discovery" target="1.8" />
+      <module name="seata-discovery-all" target="1.8" />
+      <module name="seata-discovery-consul" target="1.8" />
+      <module name="seata-discovery-core" target="1.8" />
+      <module name="seata-discovery-custom" target="1.8" />
+      <module name="seata-discovery-etcd3" target="1.8" />
+      <module name="seata-discovery-eureka" target="1.8" />
+      <module name="seata-discovery-nacos" target="1.8" />
+      <module name="seata-discovery-redis" target="1.8" />
+      <module name="seata-discovery-sofa" target="1.8" />
+      <module name="seata-discovery-zk" target="1.8" />
+      <module name="seata-distribution" target="1.8" />
+      <module name="seata-dubbo" target="1.8" />
+      <module name="seata-dubbo-alibaba" target="1.8" />
+      <module name="seata-grpc" target="1.8" />
+      <module name="seata-http" target="1.8" />
+      <module name="seata-metrics" target="1.8" />
+      <module name="seata-metrics-all" target="1.8" />
+      <module name="seata-metrics-api" target="1.8" />
+      <module name="seata-metrics-core" target="1.8" />
+      <module name="seata-metrics-exporter-prometheus" target="1.8" />
+      <module name="seata-metrics-registry-compact" target="1.8" />
+      <module name="seata-motan" target="1.8" />
+      <module name="seata-parent" target="1.8" />
+      <module name="seata-rm" target="1.8" />
+      <module name="seata-rm-datasource" target="1.8" />
+      <module name="seata-saga" target="1.8" />
+      <module name="seata-saga-engine" target="1.8" />
+      <module name="seata-saga-engine-store" target="1.8" />
+      <module name="seata-saga-processctrl" target="1.8" />
+      <module name="seata-saga-rm" target="1.8" />
+      <module name="seata-saga-statelang" target="1.8" />
+      <module name="seata-saga-tm" target="1.8" />
+      <module name="seata-serializer" target="1.8" />
+      <module name="seata-serializer-all" target="1.8" />
+      <module name="seata-serializer-fst" target="1.8" />
+      <module name="seata-serializer-hessian" target="1.8" />
+      <module name="seata-serializer-kryo" target="1.8" />
+      <module name="seata-serializer-protobuf" target="1.8" />
+      <module name="seata-serializer-seata" target="1.8" />
+      <module name="seata-server" target="1.8" />
+      <module name="seata-sofa-rpc" target="1.8" />
+      <module name="seata-spring" target="1.8" />
+      <module name="seata-spring-boot-starter" target="1.8" />
+      <module name="seata-sqlparser" target="1.8" />
+      <module name="seata-sqlparser-core" target="1.8" />
+      <module name="seata-sqlparser-druid" target="1.8" />
+      <module name="seata-tcc" target="1.8" />
+      <module name="seata-test" target="1.8" />
+      <module name="seata-tm" target="1.8" />
+      <module name="sentinel-adapter" target="1.7" />
+      <module name="sentinel-annotation-aspectj" target="1.7" />
+      <module name="sentinel-annotation-cdi-interceptor" target="1.8" />
+      <module name="sentinel-annotation-quarkus-adapter" target="1.8" />
+      <module name="sentinel-annotation-quarkus-adapter-deployment" target="1.8" />
+      <module name="sentinel-apache-dubbo-adapter" target="1.8" />
+      <module name="sentinel-apache-httpclient-adapter" target="1.8" />
+      <module name="sentinel-api-gateway-adapter-common" target="1.7" />
+      <module name="sentinel-benchmark" target="1.8" />
+      <module name="sentinel-cluster" target="1.7" />
+      <module name="sentinel-cluster-client-default" target="1.7" />
+      <module name="sentinel-cluster-common-default" target="1.7" />
+      <module name="sentinel-cluster-server-default" target="1.7" />
+      <module name="sentinel-cluster-server-envoy-rls" target="1.8" />
+      <module name="sentinel-core" target="1.7" />
+      <module name="sentinel-dashboard" target="1.8" />
+      <module name="sentinel-datasource-apollo" target="1.7" />
+      <module name="sentinel-datasource-consul" target="1.8" />
+      <module name="sentinel-datasource-etcd" target="1.8" />
+      <module name="sentinel-datasource-eureka" target="1.8" />
+      <module name="sentinel-datasource-extension" target="1.7" />
+      <module name="sentinel-datasource-nacos" target="1.7" />
+      <module name="sentinel-datasource-redis" target="1.8" />
+      <module name="sentinel-datasource-spring-cloud-config" target="1.7" />
+      <module name="sentinel-datasource-zookeeper" target="1.7" />
+      <module name="sentinel-demo" target="1.8" />
+      <module name="sentinel-demo-annotation-cdi-interceptor" target="1.8" />
+      <module name="sentinel-demo-annotation-spring-aop" target="1.8" />
+      <module name="sentinel-demo-apache-dubbo" target="1.8" />
+      <module name="sentinel-demo-apache-httpclient" target="1.8" />
+      <module name="sentinel-demo-apollo-datasource" target="1.8" />
+      <module name="sentinel-demo-basic" target="1.8" />
+      <module name="sentinel-demo-cluster" target="1.8" />
+      <module name="sentinel-demo-cluster-embedded" target="1.8" />
+      <module name="sentinel-demo-cluster-server-alone" target="1.8" />
+      <module name="sentinel-demo-command-handler" target="1.8" />
+      <module name="sentinel-demo-dubbo" target="1.8" />
+      <module name="sentinel-demo-dynamic-file-rule" target="1.8" />
+      <module name="sentinel-demo-etcd-datasource" target="1.8" />
+      <module name="sentinel-demo-jax-rs" target="1.8" />
+      <module name="sentinel-demo-log-logback" target="1.8" />
+      <module name="sentinel-demo-motan" target="1.8" />
+      <module name="sentinel-demo-nacos-datasource" target="1.8" />
+      <module name="sentinel-demo-okhttp" target="1.8" />
+      <module name="sentinel-demo-parameter-flow-control" target="1.8" />
+      <module name="sentinel-demo-quarkus" target="1.8" />
+      <module name="sentinel-demo-rocketmq" target="1.8" />
+      <module name="sentinel-demo-slot-chain-spi" target="1.8" />
+      <module name="sentinel-demo-slot-spi" target="1.8" />
+      <module name="sentinel-demo-slotchain-spi" target="1.8" />
+      <module name="sentinel-demo-sofa-rpc" target="1.8" />
+      <module name="sentinel-demo-spring-cloud-gateway" target="1.8" />
+      <module name="sentinel-demo-spring-webflux" target="1.8" />
+      <module name="sentinel-demo-spring-webmvc" target="1.8" />
+      <module name="sentinel-demo-transport-spring-mvc" target="1.8" />
+      <module name="sentinel-demo-zookeeper-datasource" target="1.8" />
+      <module name="sentinel-demo-zuul-gateway" target="1.8" />
+      <module name="sentinel-demo-zuul2-gateway" target="1.8" />
+      <module name="sentinel-dubbo-adapter" target="1.7" />
+      <module name="sentinel-extension" target="1.7" />
+      <module name="sentinel-grpc-adapter" target="1.7" />
+      <module name="sentinel-jax-rs-adapter" target="1.8" />
+      <module name="sentinel-jax-rs-quarkus-adapter" target="1.8" />
+      <module name="sentinel-jax-rs-quarkus-adapter-deployment" target="1.8" />
+      <module name="sentinel-logging" target="1.8" />
+      <module name="sentinel-logging-slf4j" target="1.8" />
+      <module name="sentinel-motan-adapter" target="1.8" />
+      <module name="sentinel-native-image-quarkus-adapter" target="1.8" />
+      <module name="sentinel-native-image-quarkus-adapter-deployment" target="1.8" />
+      <module name="sentinel-okhttp-adapter" target="1.8" />
+      <module name="sentinel-parameter-flow-control" target="1.7" />
+      <module name="sentinel-parent" target="1.7" />
+      <module name="sentinel-quarkus-adapter-parent" target="1.8" />
+      <module name="sentinel-reactor-adapter" target="1.8" />
+      <module name="sentinel-sofa-rpc-adapter" target="1.8" />
+      <module name="sentinel-spring-cloud-gateway-adapter" target="1.8" />
+      <module name="sentinel-spring-webflux-adapter" target="1.8" />
+      <module name="sentinel-spring-webmvc-adapter" target="1.8" />
+      <module name="sentinel-transport" target="1.7" />
+      <module name="sentinel-transport-common" target="1.7" />
+      <module name="sentinel-transport-netty-http" target="1.7" />
+      <module name="sentinel-transport-simple-http" target="1.7" />
+      <module name="sentinel-transport-spring-mvc" target="1.8" />
+      <module name="sentinel-web-servlet" target="1.7" />
+      <module name="sentinel-zuul-adapter" target="1.7" />
+      <module name="sentinel-zuul2-adapter" target="1.8" />
+      <module name="untitled" target="1.7" />
+      <module name="untitled1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -71,6 +278,8 @@
       <module name="heizai-geta" options="-parameters" />
       <module name="heizai-ultraman" options="-parameters" />
       <module name="heizai-ultraman (1)" options="-parameters" />
+      <module name="untitled" options="" />
+      <module name="untitled1" options="-parameters" />
     </option>
   </component>
 </project>

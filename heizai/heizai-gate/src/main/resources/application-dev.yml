@@ -4,9 +4,12 @@ spring:
       routes:
         - id: admin
           uri: lb://admin
-#          uri: localhost:5000/admin/**
           predicates:
             - Path=/admin/**
+        - id: ultraman
+          uri: lb://ultraman
+          predicates:
+            - Path=/ultraman/**
 #        - id: after_route
 #            uri: https://example.org
 #            predicates:

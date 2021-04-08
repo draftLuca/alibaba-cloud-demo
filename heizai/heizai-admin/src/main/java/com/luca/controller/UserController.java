@@ -1,6 +1,8 @@
 package com.luca.controller;
 
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.luca.entity.User;
 import com.luca.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +27,13 @@ public class UserController {
     IUserService userService;
 
     @GetMapping("/{id}")
+    @SentinelResource(value = "user", blockHandler = "blockHandlerHello")
     public String getServiceInfo(@PathVariable("id") Long id){
         User user = userService.getById(id);
         return user.toString();
     }
 
+    public String blockHandlerHello(BlockException e) {
+        return "限流了";
+    }
 }

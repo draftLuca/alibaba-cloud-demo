@@ -11,6 +11,7 @@
     <modules>
         <module>heizai-commons</module>
         <module>heizai-admin</module>
+        <module>heizai-gate</module>
     </modules>
 
     <!--集成springboot父项目-->
