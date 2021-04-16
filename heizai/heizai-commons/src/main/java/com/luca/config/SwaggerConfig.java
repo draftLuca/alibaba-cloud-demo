@@ -18,7 +18,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.OAS_30)
             .apiInfo(apiInfo())
             .select()
-            .apis(RequestHandlerSelectors.basePackage("com.example.demo"))
+            .apis(RequestHandlerSelectors.basePackage("com.luca"))
             .paths(PathSelectors.any())
             .build()
             .ignoredParameterTypes(RequestAttribute.class);

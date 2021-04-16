@@ -14,17 +14,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc9d2b88-ff13-4df7-889f-7fb851837b33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/heizai/heizai-commons/src/main/java/com/luca/config/RabbitQueueAndExchangeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/java/com/luca/controller/SendMessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alibaba-cloud-demo.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/config/MessageListenerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/config/MyAckReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/DirectReceiver2Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/DirectReceiverService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/FanoutReceiverA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/FanoutReceiverB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/FanoutReceiverC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/TopicManReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/receiver/TopicTotalReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-commons/src/main/java/com/luca/config/FanoutRabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-commons/src/main/java/com/luca/config/RabbitTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heizai/heizai-commons/src/main/java/com/luca/config/TopicRabbitConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/heizai/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heizai/heizai-admin/heizai-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-admin/heizai-admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heizai/heizai-commons/heizai-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-commons/heizai-commons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heizai/heizai-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/heizai-ultraman.iml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-ultraman/heizai-ultraman.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/java/com/luca/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-admin/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-admin/src/test/java/com/luca/SampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-admin/src/test/java/com/luca/SampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-commons/src/main/java/com/luca/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-commons/src/main/java/com/luca/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/heizai-ultraman.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/java/com/luca/UltramanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/java/com/luca/UltramanApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/java/com/luca/controller/SendMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/java/com/luca/controller/SendMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/heizai/heizai-ultraman/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/heizai/heizai-ultraman/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +82,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="add_unversioned_files" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/heizai" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29804373" />
@@ -79,15 +91,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai\heizai-admin\src\main\java\com\luca\config" />
+      <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai\heizai-ultraman\src\main\resources" />
       <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai" />
       <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai\heizai-ultraman" />
       <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai\gateway\src\main\resources" />
-      <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai\heizai-admin\src\main\resources" />
-      <recent name="D:\lean-work\cloudDemo\alibaba-cloud-demo\heizai\heizai-ultraman\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.luca.config" />
       <recent name="com.luca.service.impl" />
+      <recent name="com.luca.config" />
       <recent name="com.luca.controller" />
       <recent name="com.luca.mapper" />
       <recent name="com.luca.admin.controller" />
@@ -104,7 +116,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AdminApplicationTests.serviceCRUD">
+  <component name="RunManager" selected="JUnit.SampleTest.addNull">
+    <configuration name="AdminApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.luca.AdminApplication" />
+      <module name="heizai-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UltramanApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luca.UltramanApplication" />
       <module name="heizai-ultraman" />
@@ -134,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleTest.empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SampleTest.addNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="heizai-admin" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +169,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.luca" />
       <option name="MAIN_CLASS_NAME" value="com.luca.SampleTest" />
-      <option name="METHOD_NAME" value="empty" />
+      <option name="METHOD_NAME" value="addNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,36 +191,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleTest.serviceCRUD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="heizai-admin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.luca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.luca" />
-      <option name="MAIN_CLASS_NAME" value="com.luca.SampleTest" />
-      <option name="METHOD_NAME" value="serviceCRUD" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.UltramanApplication" />
-      <item itemvalue="JUnit.SampleTest.serviceCRUD" />
+      <item itemvalue="Application.AdminApplication" />
       <item itemvalue="JUnit.AdminApplicationTests.serviceCRUD" />
-      <item itemvalue="JUnit.SampleTest.empty" />
       <item itemvalue="JUnit.SampleTest.math" />
+      <item itemvalue="JUnit.SampleTest.addNull" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SampleTest.addNull" />
+        <item itemvalue="Application.AdminApplication" />
+        <item itemvalue="Application.UltramanApplication" />
         <item itemvalue="JUnit.AdminApplicationTests.serviceCRUD" />
         <item itemvalue="JUnit.SampleTest.math" />
-        <item itemvalue="JUnit.SampleTest.empty" />
-        <item itemvalue="JUnit.SampleTest.serviceCRUD" />
-        <item itemvalue="Application.UltramanApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617862440584</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat:ignore文件无效..">
+      <created>1617873719668</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617873719668</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,7 +257,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat:openfeign调用" />
     <MESSAGE value="feat:乱七八糟" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:乱七八糟" />
+    <MESSAGE value="feat:ignore文件无效.." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:ignore文件无效.." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1480" y="94" key="#Project_Structure" timestamp="1617085428123">
@@ -252,54 +269,54 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1616" y="180" width="1092" height="836" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617178199177" />
-    <state x="-1155" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1616825533920">
+    <state x="-1155" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1618297434912">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1155" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1616825533920" />
-    <state x="-1230" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617159843788">
+    <state x="-1155" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618297434912" />
+    <state x="-1230" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618301321346">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1230" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617159843788" />
+    <state x="-1230" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618301321346" />
     <state x="-1212" y="307" key="EnvironmentVariablesDialog" timestamp="1616836621777">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1212" y="307" key="EnvironmentVariablesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1616836621777" />
-    <state x="-1257" y="238" key="FileChooserDialogImpl" timestamp="1617867078770">
+    <state x="-1257" y="238" key="FileChooserDialogImpl" timestamp="1617874912522">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1257" y="238" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617867078770" />
-    <state width="1877" height="494" key="GridCell.Tab.0.bottom" timestamp="1617862193975">
+    <state x="-1257" y="238" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617874912522" />
+    <state width="1877" height="494" key="GridCell.Tab.0.bottom" timestamp="1618467302951">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
-    <state width="1877" height="494" key="GridCell.Tab.0.center" timestamp="1617862193975">
+    <state width="1877" height="494" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302951" />
+    <state width="1877" height="494" key="GridCell.Tab.0.center" timestamp="1618467302951">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
-    <state width="1877" height="494" key="GridCell.Tab.0.left" timestamp="1617862193974">
+    <state width="1877" height="494" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302951" />
+    <state width="1877" height="494" key="GridCell.Tab.0.left" timestamp="1618467302950">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193974" />
-    <state width="1877" height="494" key="GridCell.Tab.0.right" timestamp="1617862193975">
+    <state width="1877" height="494" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302950" />
+    <state width="1877" height="494" key="GridCell.Tab.0.right" timestamp="1618467302951">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
-    <state width="1877" height="494" key="GridCell.Tab.1.bottom" timestamp="1617862193975">
+    <state width="1877" height="494" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302951" />
+    <state width="1877" height="494" key="GridCell.Tab.1.bottom" timestamp="1618467302800">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
-    <state width="1877" height="494" key="GridCell.Tab.1.center" timestamp="1617862193975">
+    <state width="1877" height="494" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302800" />
+    <state width="1877" height="494" key="GridCell.Tab.1.center" timestamp="1618467302800">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
-    <state width="1877" height="494" key="GridCell.Tab.1.left" timestamp="1617862193975">
+    <state width="1877" height="494" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302800" />
+    <state width="1877" height="494" key="GridCell.Tab.1.left" timestamp="1618467302800">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
-    <state width="1877" height="494" key="GridCell.Tab.1.right" timestamp="1617862193975">
+    <state width="1877" height="494" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302800" />
+    <state width="1877" height="494" key="GridCell.Tab.1.right" timestamp="1618467302800">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="494" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862193975" />
+    <state width="1877" height="494" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618467302800" />
     <state x="-1380" y="263" key="IDE.errors.dialog" timestamp="1617086156867">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -316,14 +333,18 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1684" y="189" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617872437939" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617862446729">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617873721597">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617862446729" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617873721597" />
     <state x="-1520" y="163" key="new project wizard" timestamp="1617710032815">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1520" y="163" key="new project wizard/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617710032815" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617873690981">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1617873690981" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

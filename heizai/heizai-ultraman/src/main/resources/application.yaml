@@ -1,6 +1,7 @@
-servlet:
+server: 
   port: 5001
-  context-path: /ultraman
+  servlet:
+    context-path: /ultraman
 spring:
   application:
     name: ultraman
@@ -22,7 +23,11 @@ spring:
     rabbitmq:
       host: 127.0.0.1
       port: 5672
-      username: guest
-      password: guest
+      username: root
+      password: root
       #虚拟host 可以不设置,使用server默认host
       virtual-host: JCcccHost
+      #确认消息发送到交换机
+      #确认消息已发送到队列
+      publisher-confirm-type: correlated
+      publisher-returns: true

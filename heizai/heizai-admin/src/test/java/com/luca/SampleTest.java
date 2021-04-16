@@ -1,5 +1,6 @@
 package com.luca;
 
+import com.luca.entity.Dept;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.junit.Test;
@@ -47,5 +48,15 @@ public class SampleTest {
             System.out.println(format1);
             System.out.println("-------------------------");
         }
+    }
+
+    @Test
+    public void addNull() {
+        ArrayList<Long> stringArrayList = new ArrayList<>();
+        ArrayList<Dept> stringArrayList2 = new ArrayList<>();
+        List<Long> collect = stringArrayList2.stream().map(Dept::getId).collect(Collectors.toList());
+        stringArrayList.add(1L);
+        stringArrayList.removeAll(collect);
+        log.info(ObjectUtils.isEmpty(stringArrayList)+"");
     }
 }
