@@ -40,4 +40,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>my_hostes</id>
+            <url>http://47.103.26.35:8082/repository/ls/</url>
+            <name>nuexs</name>
+        </repository>
+    </distributionManagement>
 </project>

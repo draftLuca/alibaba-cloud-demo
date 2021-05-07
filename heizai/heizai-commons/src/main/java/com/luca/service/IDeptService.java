@@ -14,4 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IDeptService extends IService<Dept> {
 
     public String test(Long id);
+
+    Dept create();
 }

@@ -74,8 +74,8 @@
             </dependency>
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
-                <artifactId>swagger-bootstrap-ui</artifactId>
-                <version>1.9.1</version>
+                <artifactId>knife4j-spring-ui</artifactId>
+                <version>2.0.3</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -90,4 +90,17 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <!--  远程仓库配置  -->
+    <repositories>
+        <repository>
+            <id>aliyun-releases</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

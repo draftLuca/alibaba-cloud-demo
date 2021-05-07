@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -32,4 +33,13 @@ public class AdminApplicationTests {
         log.info(collect.toString());
         users.forEach(i -> System.out.println(users.toString()));*/
     }
+
+    @Test
+    public void updateNull() {
+
+        boolean a = iUserService.updateBatchById(new ArrayList<>());
+        log.info(a+"");
+    }
+
+
 }
