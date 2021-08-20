@@ -1,6 +1,6 @@
 package com.luca.mapper;
 
-import com.luca.entity.User;
+import com.luca.pojo.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

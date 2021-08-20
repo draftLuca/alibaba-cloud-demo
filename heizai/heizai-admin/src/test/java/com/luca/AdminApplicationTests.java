@@ -1,7 +1,7 @@
 package com.luca;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.luca.entity.User;
+import com.luca.pojo.entity.User;
 import com.luca.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -37,9 +37,26 @@ public class AdminApplicationTests {
     @Test
     public void updateNull() {
 
+        boolean a = iUserService.saveBatch(new ArrayList<User>());
+        log.info(a+"");
+    }
+
+    @Test
+    public void queryNull() {
+        List<User> users = iUserService.list(Wrappers.lambdaQuery(User.class).select(User::getDeptId).eq(User::getId,7));
         boolean a = iUserService.updateBatchById(new ArrayList<>());
         log.info(a+"");
     }
 
+
+    @Test
+    public void arrayList() {
+        ArrayList<String> aaa = new ArrayList<>();
+        aaa.add("1");
+        ArrayList<String> bbbb = new ArrayList<>();
+        bbbb = aaa;
+        bbbb.add("2");
+        log.info(bbbb.hashCode()+"");
+    }
 
 }

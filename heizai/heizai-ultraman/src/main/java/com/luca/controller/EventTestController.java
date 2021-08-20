@@ -1,7 +1,7 @@
 package com.luca.controller;
 
 
-import com.luca.entity.Dept;
+import com.luca.pojo.entity.Dept;
 import com.luca.service.IDeptService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

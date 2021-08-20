@@ -3,8 +3,10 @@ package com.luca.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.luca.entity.User;
+import com.luca.pojo.entity.User;
+import com.luca.pojo.vo.ResponseVO;
 import com.luca.service.IUserService;
+import com.luca.util.ResultUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +34,9 @@ public class UserController {
     @GetMapping("/{id}")
     @ApiOperation(value = "查询列表")
     @SentinelResource(value = "user", blockHandler = "blockHandlerHello")
-    public String getServiceInfo(@PathVariable("id") Long id){
+    public ResponseVO<User> getServiceInfo(@PathVariable("id") Long id){
         User user = userService.getById(id);
-        return user.toString();
+        return ResultUtil.success(user);
     }
 
     public String blockHandlerHello(BlockException e) {

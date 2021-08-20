@@ -3,7 +3,7 @@
 <mapper namespace="com.luca.mapper.DeptMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.luca.entity.Dept">
+    <resultMap id="BaseResultMap" type="com.luca.pojo.entity.Dept">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="pid" property="pid" />

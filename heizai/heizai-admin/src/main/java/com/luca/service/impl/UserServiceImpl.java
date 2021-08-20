@@ -1,7 +1,7 @@
 package com.luca.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.luca.entity.User;
+import com.luca.pojo.entity.User;
 import com.luca.mapper.UserMapper;
 import com.luca.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;

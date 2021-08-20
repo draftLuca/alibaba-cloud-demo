@@ -1,6 +1,6 @@
 package com.luca.service;
 
-import com.luca.entity.User;
+import com.luca.pojo.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

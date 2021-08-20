@@ -2,7 +2,7 @@ package com.luca.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.luca.config.DepteEvent;
-import com.luca.entity.Dept;
+import com.luca.pojo.entity.Dept;
 import com.luca.feign.admin.FUserService;
 import com.luca.mapper.DeptMapper;
 import com.luca.service.IDeptService;

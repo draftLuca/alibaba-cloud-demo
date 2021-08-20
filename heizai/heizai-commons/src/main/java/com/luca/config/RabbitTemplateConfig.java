@@ -59,6 +59,7 @@ public class RabbitTemplateConfig {
         rabbitTemplate.setReturnCallback((message, replyCode, replyText, exchange, routingKey) -> {
             log.info("消息丢失：未从exchange发送到queue：exchange({}), routingKey({}), replyCode({}), replyText({}), message:{}", exchange, routingKey, replyCode, replyText, message);
             // 日志记录, 或者存入Redis、MySQL
+
         });
 
         return rabbitTemplate;
