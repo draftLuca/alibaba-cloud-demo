@@ -1,7 +1,7 @@
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/yshop2?useUnicode=true&characterEncoding=UTF8
+    url: jdbc:mysql://localhost:3306/heizai?useUnicode=true&characterEncoding=UTF8
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver

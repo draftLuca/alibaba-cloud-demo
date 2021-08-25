@@ -1,6 +1,5 @@
 package com.luca;
 
-import com.luca.pojo.entity.Dept;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -16,7 +15,6 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -56,21 +54,6 @@ public class SampleTest {
             System.out.println(format1);
             System.out.println("-------------------------");
         }
-    }
-
-    @Test
-    public void addNull() {
-        ArrayList<Long> stringArrayList = new ArrayList<>();
-        ArrayList<Dept> stringArrayList2 = new ArrayList<>();
-        List<Long> collect = stringArrayList2.stream().map(Dept::getId).collect(Collectors.toList());
-        stringArrayList.add(1L);
-        stringArrayList.removeAll(collect);
-        log.info(ObjectUtils.isEmpty(stringArrayList)+"");
-        String regex = "/s[http:|https:]//[A-Za-z0-9\\._\\?%&+\\-=/#!@#$*()]*/s";
-        Pattern pattern = Pattern.compile(regex);
-//        Matcher matcher = pattern.matcher(douyinUrlBackfillQuery.getDouyinUrl());
-//        if (!matcher.find() || ObjectUtils.isEmpty(matcher.group())) {
-//        }
     }
 
     @Test

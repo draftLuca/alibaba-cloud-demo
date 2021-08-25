@@ -17,7 +17,6 @@ import java.util.Scanner;
 public class CodeGenerator {
 
     private static final String PACKAGE = "com.luca";
-    private static final String MODULE = "";
     private static final String PROJECT_ROOT = "/heizai/heizai-commons";
 
     /**
@@ -43,7 +42,7 @@ public class CodeGenerator {
         AutoGenerator mpg = new AutoGenerator();
 
         Scanner scanner = new Scanner(System.in);
-        // String moduleName = getInput(scanner, "模块名");
+        String moduleName = getInput(scanner, "模块名");
         String[] tableNames = getInput(scanner, "表名，多个英文逗号分割").split(",");
         scanner.close();
 
@@ -65,7 +64,7 @@ public class CodeGenerator {
         // dsc.setDriverName("com.mysql.jdbc.Driver");
         // dsc.setUsername("root");
         // dsc.setPassword("密码");
-        dsc.setUrl("jdbc:mysql://localhost:3306/yshop2?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://localhost:3306/heizai?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC");
 //        dsc.setSchemaName(MODULE);
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
@@ -74,7 +73,7 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-//        pc.setModuleName(MODULE);
+        pc.setModuleName(moduleName);
         pc.setParent(PACKAGE); // 配置父包名
         pc.setEntity("entity");
         pc.setMapper("mapper");

@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.luca.mapper")
+@MapperScan("com.luca.**.mapper*")
 @EnableFeignClients
 public class AdminApplication {
     public static void main(String[] args) {
