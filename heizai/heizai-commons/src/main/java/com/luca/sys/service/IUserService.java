@@ -23,4 +23,12 @@ public interface IUserService extends IService<User> {
     boolean update(User user);
     
     boolean remove(Long id);
+
+    /**
+     * 根据用户名查找
+     *
+     * @param userName
+     * @return
+     */
+    User getByUserName(String userName);
 }

@@ -31,7 +31,7 @@ public class User implements Serializable {
 
     @JsonProperty(value = "id")
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     @JsonProperty(value = "username")
     private String username;

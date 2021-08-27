@@ -4,6 +4,8 @@ import com.luca.sys.entity.Resources;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -23,4 +25,12 @@ public interface IResourcesService extends IService<Resources> {
     boolean update(Resources resources);
     
     boolean remove(Long id);
+
+    /**
+     * 获取用户关联的所有资源
+     *
+     * @param userId
+     * @return
+     */
+    List<Resources> listByUserId(Long userId);
 }

@@ -1,5 +1,7 @@
 package com.luca.feign.admin;
 
+import com.luca.pojo.vo.ResponseVO;
+import com.luca.sys.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name="admin")
 public interface FUserService {
 
-    @GetMapping("admin/user/{id}")
-    public String getServiceInfo(@PathVariable("id") Long id);
+    @GetMapping("/sys/user/{id}")
+    public ResponseVO<User> get(@PathVariable("id") Long id);
 }

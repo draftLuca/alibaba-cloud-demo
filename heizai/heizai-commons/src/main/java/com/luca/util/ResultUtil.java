@@ -11,6 +11,10 @@ public class ResultUtil<T> {
         return vo(code, message, null);
     }
 
+    public static ResponseVO error(String message) {
+        return vo(ResponseStatus.FAIL.getCode(), message, null);
+    }
+
     public static ResponseVO error() {
         return vo(ResponseStatus.FAIL.getCode(),ResponseStatus.FAIL.getMessage(), null);
     }

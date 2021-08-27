@@ -27,5 +27,18 @@ spring:
 #      password: root
       #虚拟host 可以不设置,使用server默认host
       virtual-host: JCcccHost
+    redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      password: own@three*123
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+          max-idle: 8
+          min-idle: 0
+      timeout: 5000ms
+      expireTime: 180
 
 
