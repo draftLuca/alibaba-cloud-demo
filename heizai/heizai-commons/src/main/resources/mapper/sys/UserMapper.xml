@@ -5,29 +5,15 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.luca.sys.entity.User">
         <id column="id" property="id" />
-        <result column="username" property="username" />
+        <result column="account" property="account" />
         <result column="password" property="password" />
-        <result column="nickname" property="nickname" />
-        <result column="mobile" property="mobile" />
-        <result column="email" property="email" />
-        <result column="qq" property="qq" />
-        <result column="birthday" property="birthday" />
-        <result column="gender" property="gender" />
-        <result column="avatar" property="avatar" />
-        <result column="user_type" property="userType" />
-        <result column="reg_ip" property="regIp" />
-        <result column="last_login_ip" property="lastLoginIp" />
-        <result column="last_login_time" property="lastLoginTime" />
-        <result column="login_count" property="loginCount" />
-        <result column="remark" property="remark" />
-        <result column="status" property="status" />
-        <result column="create_time" property="createTime" />
-        <result column="update_time" property="updateTime" />
+        <result column="username" property="username" />
+        <result column="reg_time" property="regTime" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, username, password, nickname, mobile, email, qq, birthday, gender, avatar, user_type, reg_ip, last_login_ip, last_login_time, login_count, remark, status, create_time, update_time
+        id, account, password, username, reg_time
     </sql>
 
 </mapper>

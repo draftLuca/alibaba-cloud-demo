@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- *  前端控制器
+ * 角色表 前端控制器
  * </p>
  *
  * @author luca
- * @since 2021-08-25
+ * @since 2021-08-27
  */
-@Api(tags = "")
+@Api(tags = "角色表")
 @RestController
 @RequestMapping("/sys/role")
 public class RoleController {

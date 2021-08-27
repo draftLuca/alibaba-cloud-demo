@@ -6,11 +6,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 /**
  * <p>
- *  服务类
+ * 用户角色表 服务类
  * </p>
  *
  * @author luca
- * @since 2021-08-25
+ * @since 2021-08-27
  */
 public interface IUserRoleService extends IService<UserRole> {
 

@@ -6,11 +6,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 /**
  * <p>
- *  服务类
+ * 用户表 服务类
  * </p>
  *
  * @author luca
- * @since 2021-08-25
+ * @since 2021-08-27
  */
 public interface IUserService extends IService<User> {
 
@@ -23,12 +23,4 @@ public interface IUserService extends IService<User> {
     boolean update(User user);
     
     boolean remove(Long id);
-
-    /**
-     * 根据用户名查找
-     *
-     * @param userName
-     * @return
-     */
-    User getByUserName(String userName);
 }

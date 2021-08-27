@@ -1,36 +1,46 @@
 package com.luca.controller;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.luca.consts.Constant;
+import com.luca.exception.CustomUnauthorizedException;
 import com.luca.pojo.vo.ResponseVO;
 import com.luca.sys.entity.User;
 import com.luca.sys.service.IUserService;
-import com.luca.util.PasswordUtil;
+import com.luca.util.AesCipherUtil;
+import com.luca.util.JedisUtil;
+import com.luca.util.JwtUtil;
 import com.luca.util.ResultUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
- *  前端控制器
+ * 用户表 前端控制器
  * </p>
  *
  * @author luca
- * @since 2021-08-25
+ * @since 2021-08-27
  */
-@Slf4j
-@Api(tags = "")
+@Api(tags = "用户表")
 @RestController
 @RequestMapping("/sys/user")
 public class UserController {
+
+    /**
+     * RefreshToken过期时间
+     */
+    @Value("${refreshTokenExpireTime}")
+    private String refreshTokenExpireTime;
+
 
     @Autowired
     IUserService iUserService;
@@ -47,11 +57,9 @@ public class UserController {
         return ResultUtil.success(userPage);
     }
 
-    @RequiresPermissions("user:add")
     @ApiOperation(value = "创建", httpMethod = "POST")
     @PostMapping("")
-    public ResponseVO<User> create(@RequestBody User user) throws Exception {
-        user.setPassword(PasswordUtil.encrypt(user.getPassword(), user.getUsername()));
+    public ResponseVO<User> create(@RequestBody User user) {
         iUserService.create(user);
         return ResultUtil.success(user);
     }
@@ -75,23 +83,38 @@ public class UserController {
         return ResultUtil.success(iUserService.remove(id));
     }
 
-    @ApiOperation(value = "登录", httpMethod = "POST")
-    @PostMapping("/signin")
-    @ResponseBody
-    public ResponseVO submitLogin(@RequestBody User user) {
-        UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(), user.getPassword());
-        //获取当前的Subject
-        Subject currentUser = SecurityUtils.getSubject();
-        try {
-            // 在调用了login方法后,SecurityManager会收到AuthenticationToken,并将其发送给已配置的Realm执行必须的认证检查
-            // 每个Realm都能在必要时对提交的AuthenticationTokens作出反应
-            // 所以这一步在调用login(token)方法时,它会走到xxRealm.doGetAuthenticationInfo()方法中,具体验证方式详见此方法
-            currentUser.login(token);
-            return ResultUtil.success("登录成功！");
-        } catch (Exception e) {
-            log.error("登录失败，用户名[{}]", user.getUsername(), e);
-            token.clear();
-            return ResultUtil.error(e.getMessage());
+    /**
+     * 登录授权
+     * @param userDto
+     * @return com.wang.model.common.ResponseBean
+     * @author dolyw.com
+     * @date 2018/8/30 16:21
+     */
+    @PostMapping("/login")
+    public ResponseVO login(@RequestBody User userDto, HttpServletResponse httpServletResponse) {
+        // 查询数据库中的帐号信息
+        User userDtoTemp = iUserService.getOne(Wrappers.lambdaQuery(new User()).eq(User::getAccount, userDto.getAccount()));
+        if (userDtoTemp == null) {
+            throw new CustomUnauthorizedException("该帐号不存在(The account does not exist.)");
+        }
+        // 密码进行AES解密
+        String key = AesCipherUtil.deCrypto(userDtoTemp.getPassword());
+        // 因为密码加密是以帐号+密码的形式进行加密的，所以解密后的对比是帐号+密码
+        if (key.equals(userDto.getAccount() + userDto.getPassword())) {
+            // 清除可能存在的Shiro权限信息缓存
+            if (JedisUtil.exists(Constant.PREFIX_SHIRO_CACHE + userDto.getAccount())) {
+                JedisUtil.delKey(Constant.PREFIX_SHIRO_CACHE + userDto.getAccount());
+            }
+            // 设置RefreshToken，时间戳为当前时间戳，直接设置即可(不用先删后设，会覆盖已有的RefreshToken)
+            String currentTimeMillis = String.valueOf(System.currentTimeMillis());
+            JedisUtil.setObject(Constant.PREFIX_SHIRO_REFRESH_TOKEN + userDto.getAccount(), currentTimeMillis, Integer.parseInt(refreshTokenExpireTime));
+            // 从Header中Authorization返回AccessToken，时间戳为当前时间戳
+            String token = JwtUtil.sign(userDto.getAccount(), currentTimeMillis);
+            httpServletResponse.setHeader("Authorization", token);
+            httpServletResponse.setHeader("Access-Control-Expose-Headers", "Authorization");
+            return new ResponseVO(HttpStatus.OK.value(), "登录成功(Login Success.)", null);
+        } else {
+            throw new CustomUnauthorizedException("帐号或密码错误(Account or Password Error.)");
         }
     }
 }
