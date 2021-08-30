@@ -1,18 +1,9 @@
 package com.luca.util;
 
-import com.luca.exception.CustomUnauthorizedException;
-import com.sun.crypto.provider.SunJCE;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import javax.crypto.*;
-import java.io.UnsupportedEncodingException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.Security;
 
 /**
  * AES加密解密工具类
@@ -46,7 +37,8 @@ public class AesCipherUtil {
      * @date 2018/8/31 16:56
      */
     public static String enCrypto(String str) {
-        try {
+        return str;
+        /*try {
             Security.addProvider(new SunJCE());
             // 实例化支持AES算法的密钥生成器(算法名称命名需按规定，否则抛出异常)
             // KeyGenerator 提供对称密钥生成器的功能，支持各种算法
@@ -78,7 +70,7 @@ public class AesCipherUtil {
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             logger.error("加密异常，密钥有误:{}", e.getMessage());
             throw new CustomUnauthorizedException("加密异常，密钥有误:" + e.getMessage());
-        }
+        }*/
     }
 
     /**
@@ -89,7 +81,8 @@ public class AesCipherUtil {
      * @date 2018/8/31 16:56
      */
     public static String deCrypto(String str) {
-        try {
+        return str;
+        /*try {
             Security.addProvider(new SunJCE());
             // 实例化支持AES算法的密钥生成器(算法名称命名需按规定，否则抛出异常)
             // KeyGenerator 提供对称密钥生成器的功能，支持各种算法
@@ -119,6 +112,6 @@ public class AesCipherUtil {
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             logger.error("解密异常，密钥有误:{}", e.getMessage());
             throw new CustomUnauthorizedException("解密异常，密钥有误:" + e.getMessage());
-        }
+        }*/
     }
 }

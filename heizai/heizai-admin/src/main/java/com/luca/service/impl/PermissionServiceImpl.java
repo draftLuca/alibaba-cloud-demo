@@ -1,4 +1,4 @@
-package com.luca.sys.service.impl;
+package com.luca.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

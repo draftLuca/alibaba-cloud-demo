@@ -19,7 +19,7 @@
         SELECT
         p.id as id,
         p.name as name,
-        p.per_code as perCode
+        p.per_code
         FROM
         role r
         LEFT JOIN role_permission rp ON r.id = rp.role_id

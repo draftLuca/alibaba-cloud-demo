@@ -1,11 +1,11 @@
-package com.luca.sys.service.impl;
+package com.luca.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.luca.sys.entity.User;
-import com.luca.sys.mapper.UserMapper;
-import com.luca.sys.service.IUserService;
+import com.luca.sys.entity.Role;
+import com.luca.sys.mapper.RoleMapper;
+import com.luca.sys.service.IRoleService;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,53 +13,53 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
- * 用户表 服务实现类
+ * 角色表 服务实现类
  * </p>
  *
  * @author luca
  * @since 2021-08-27
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IRoleService {
 
     @Autowired
-    UserMapper userMapper;
+    RoleMapper roleMapper;
 
     @Override
-    public Page<User> listPage(Page<User> page) {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        return userMapper.selectPage(page, queryWrapper);
+    public Page<Role> listPage(Page<Role> page) {
+        QueryWrapper<Role> queryWrapper = new QueryWrapper<>();
+        return roleMapper.selectPage(page, queryWrapper);
     }
 
     @Override
-    public User get(Long id) {
-        User user = getById(id);
-        return user;
-    }
-
-    @Override
-    @Transactional(rollbackFor = Exception.class)
-    public boolean create(User user) {
-        user.setId(null);
-        return save(user);
+    public Role get(Long id) {
+        Role role = getById(id);
+        return role;
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public boolean update(User user) {
-        User userOrigin = getById(user.getId());
-        if (ObjectUtils.isEmpty(userOrigin)) {
+    public boolean create(Role role) {
+        role.setId(null);
+        return save(role);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean update(Role role) {
+        Role roleOrigin = getById(role.getId());
+        if (ObjectUtils.isEmpty(roleOrigin)) {
             return false;
         }
 
-        return updateById(user);
+        return updateById(role);
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
     public boolean remove(Long id) {
-        User userOrigin = getById(id);
-        if (ObjectUtils.isEmpty(userOrigin)) {
+        Role roleOrigin = getById(id);
+        if (ObjectUtils.isEmpty(roleOrigin)) {
             return false;
         }
         return removeById(id);

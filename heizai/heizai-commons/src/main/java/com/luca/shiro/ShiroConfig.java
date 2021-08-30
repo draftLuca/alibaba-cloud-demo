@@ -58,7 +58,7 @@ public class ShiroConfig {
         map.put("/webjars/**", "anon");
         map.put("/doc.html/**","anon");
         //登录
-        map.put("/sys/user/signin", "anon");
+        map.put("/sys/user/login", "anon");
         map.put("/**","authc");
 
         //设置登录页面路劲

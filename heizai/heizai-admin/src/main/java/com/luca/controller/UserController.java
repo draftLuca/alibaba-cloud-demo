@@ -15,6 +15,9 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.Logical;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -51,6 +54,7 @@ public class UserController {
         @ApiImplicitParam(name = "size", value = "每页显示条数", dataTypeClass = Long.class)
     })
     @PostMapping("/query")
+    @RequiresPermissions(logical = Logical.AND, value = {"user:delete"})
     public ResponseVO<Page<User>> query(@RequestParam(defaultValue = "1") Long current, @RequestParam(defaultValue = "10") Long size) {
         Page<User> page = new Page<>(current, size);
         Page<User> userPage = iUserService.listPage(page);
@@ -59,6 +63,7 @@ public class UserController {
 
     @ApiOperation(value = "创建", httpMethod = "POST")
     @PostMapping("")
+    @RequiresPermissions(logical = Logical.AND, value = {"user:edit"})
     public ResponseVO<User> create(@RequestBody User user) {
         iUserService.create(user);
         return ResultUtil.success(user);
@@ -66,12 +71,14 @@ public class UserController {
 
     @ApiOperation(value = "获取", httpMethod = "GET")
     @GetMapping("/{id}")
+    @RequiresAuthentication
     public ResponseVO<User> get(@PathVariable Long id) {
         return ResultUtil.success(iUserService.get(id));
     }
 
     @ApiOperation(value = "修改", httpMethod = "PUT")
     @PutMapping("/{id}")
+    @RequiresPermissions(logical = Logical.AND, value = {"user:edit"})
     public ResponseVO<String> update(@PathVariable Long id, @RequestBody User user) {
         user.setId(id);
         return ResultUtil.success(iUserService.update(user));
@@ -79,6 +86,7 @@ public class UserController {
 
     @ApiOperation(value = "删除", httpMethod = "DELETE")
     @DeleteMapping("/{id}")
+    @RequiresPermissions(logical = Logical.AND, value = {"user:delete"})
     public ResponseVO<String> remove(@PathVariable Long id) {
         return ResultUtil.success(iUserService.remove(id));
     }
@@ -100,7 +108,8 @@ public class UserController {
         // 密码进行AES解密
         String key = AesCipherUtil.deCrypto(userDtoTemp.getPassword());
         // 因为密码加密是以帐号+密码的形式进行加密的，所以解密后的对比是帐号+密码
-        if (key.equals(userDto.getAccount() + userDto.getPassword())) {
+//        if (key.equals(userDto.getAccount() + userDto.getPassword())) {
+        if (key.equals(userDto.getPassword())) {
             // 清除可能存在的Shiro权限信息缓存
             if (JedisUtil.exists(Constant.PREFIX_SHIRO_CACHE + userDto.getAccount())) {
                 JedisUtil.delKey(Constant.PREFIX_SHIRO_CACHE + userDto.getAccount());

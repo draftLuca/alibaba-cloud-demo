@@ -1,8 +1,6 @@
 package com.luca.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.luca.sys.entity.User;
@@ -15,11 +13,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
- *  服务实现类
+ * 用户表 服务实现类
  * </p>
  *
  * @author luca
- * @since 2021-08-25
+ * @since 2021-08-27
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
@@ -66,12 +64,5 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
         return removeById(id);
     }
-
-    @Override
-    public User getByUserName(String userName) {
-        LambdaQueryWrapper<User> userLambdaQueryWrapper = Wrappers.lambdaQuery(new User());
-        userLambdaQueryWrapper.eq(User::getUsername, userName);
-        return getOne(userLambdaQueryWrapper, false);
-    }
-
+    
 }
